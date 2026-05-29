@@ -1,0 +1,16 @@
+dataset,model,wf1
+SecReq,Qwen2-7B,0.944
+SecReq,Falcon3-7B,0.947
+SecReq,Granite-3.2-8B,0.858
+SecReq,Ministral-8B,0.922
+SecReq,Llama-3-8B,0.909
+Promise_NFR,Qwen2-7B,0.852
+Promise_NFR,Falcon3-7B,0.826
+Promise_NFR,Granite-3.2-8B,0.847
+Promise_NFR,Ministral-8B,0.847
+Promise_NFR,Llama-3-8B,0.797
+Promise_Refined,Qwen2-7B,0.648
+Promise_Refined,Falcon3-7B,0.606
+Promise_Refined,Granite-3.2-8B,0.636
+Promise_Refined,Ministral-8B,0.528
+Promise_Refined,Llama-3-8B,0.688

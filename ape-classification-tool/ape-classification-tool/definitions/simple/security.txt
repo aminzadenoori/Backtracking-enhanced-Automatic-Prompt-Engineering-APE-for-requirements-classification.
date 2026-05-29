@@ -1,0 +1,2 @@
+Security: requirements that constrain system behaviour to protect against unauthorized access and threats, covering authentication, encryption, access control, and data protection.
+Non-security: requirements that govern behaviour, performance, or structure without aiming to prevent, detect, or recover from harm, and that do not operationalize security policies.

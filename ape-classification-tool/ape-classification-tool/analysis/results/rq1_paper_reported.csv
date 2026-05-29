@@ -1,0 +1,5 @@
+baseline,n,mean_delta,ci_low,ci_high,effect_label,p_corrected
+Zero-shot,15,0.1425,0.0867,0.1983,large,0.000305
+Few-shot,15,0.1139,0.0807,0.1472,large,0.001307
+CoT,15,0.1202,0.0836,0.1568,large,0.001335
+CoT+Few-shot,15,0.1135,0.0884,0.1386,large,0.001953

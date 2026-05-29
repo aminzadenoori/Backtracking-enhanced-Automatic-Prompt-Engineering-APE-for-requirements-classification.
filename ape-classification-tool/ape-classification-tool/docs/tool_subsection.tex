@@ -1,0 +1,112 @@
+% =====================================================================
+%  Compact tool subsection (TOSEM) using the five real screenshots.
+%  Preamble needs:
+%     \usepackage{graphicx}
+%     \usepackage{subcaption}   % for subfigure grid
+%     \usepackage{url}          % or hyperref
+%  Put the five PNGs in a ./figures/ directory next to the main .tex:
+%     figures/tool_setup.png  tool_prompt.png  tool_baselines.png
+%     figures/tool_ape.png    tool_results.png
+% =====================================================================
+
+\subsection{An Interactive Tool for Prompt Optimization}
+\label{sec:tool}
+
+To make our procedure reusable beyond the experiments reported above, we
+implemented an interactive tool that operationalizes the full pipeline---the
+prompting baselines, the backtracking-enhanced APE loop of
+Algorithm~\ref{alg:approach}, and per-class evaluation---behind a graphical
+interface. The tool requires no coding, infers the label set directly from
+the data, and is decoupled from any specific model provider: the same
+workflow runs against a locally hosted open-weight model (e.g., via Ollama)
+or any OpenAI-compatible endpoint. It thus serves three purposes:
+\emph{replicating} our results, \emph{transferring} the method to any
+single-label text-classification task, and \emph{exposing} prompt
+optimization as an observable, step-by-step process.
+
+The interface follows the natural order of an experiment in five steps.
+In \textbf{Data \& Config} (Fig.~\ref{fig:tool-setup}) the user uploads a CSV
+whose first column is the text and last column the gold label; the tool
+reports the class distribution, lets the user pick the backend and model,
+and exposes the run hyper-parameters---train/test split, majority-voting
+runs, the iteration budget $N_{\max}$, and the backtracking threshold
+$X$---as sliders. In \textbf{Prompt} (Fig.~\ref{fig:tool-prompt}) the prompt
+is split into a \emph{fixed part} that frames the task and fixes the output
+format, and an \emph{optimizable part} holding the label definitions; only
+the latter is rewritten during optimization, focusing the search on the
+semantically meaningful portion of the prompt. \textbf{Baselines}
+(Fig.~\ref{fig:tool-baselines}) runs zero-shot, few-shot, Chain-of-Thought
+(CoT), and CoT~+~few-shot individually or together, reporting per-class
+F\textsubscript{1} for each.
+
+The \textbf{APE Optimisation} step (Fig.~\ref{fig:tool-ape}) is the core of
+the tool. It can advance one \emph{interactive} iteration at a time or run
+\emph{automatically} to the budget. At each iteration the engine
+meta-prompts the model to improve the optimizable section, evaluates the
+candidate on the test split with majority voting, ranks it by
+F\textsubscript{1}, and---after $X$ consecutive non-improving steps---backtracks
+to the next-best prompt. The iteration log, the colored iteration-history
+strip (green~=~improvement, amber~=~backtrack), the live ``best prompt'' and
+its evolving optimizable section, and the current per-class metrics are all
+surfaced together, making the otherwise opaque dynamics of the search
+directly observable. Finally, \textbf{Results} (Fig.~\ref{fig:tool-results})
+contrasts every method run in the session by macro- and per-class
+F\textsubscript{1}, making the gain of the optimized prompt over the
+strongest baseline immediately legible. The tool, together with the datasets
+and label definitions used in this paper, is available at
+\url{<REPLACE-WITH-REPOSITORY-URL>}.
+
+% ---- Figure 1: Setup (single, full width) -----------------------------------
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.86\linewidth]{figures/tool_setup.png}
+  \caption{\textbf{Data \& Config.} The dataset is uploaded as a CSV (text
+  first, label last); the tool infers the classes and their distribution,
+  selects the backend and model, and exposes the run hyper-parameters as
+  sliders.}
+  \label{fig:tool-setup}
+\end{figure}
+
+% ---- Figure 2: Prompt (single, full width) ----------------------------------
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.96\linewidth]{figures/tool_prompt.png}
+  \caption{\textbf{Prompt.} The prompt is separated into a fixed task-framing
+  part and an optimizable definitions part (highlighted); APE rewrites only
+  the latter.}
+  \label{fig:tool-prompt}
+\end{figure}
+
+% ---- Figure 3: APE (single, the key figure) ---------------------------------
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.96\linewidth]{figures/tool_ape.png}
+  \caption{\textbf{APE Optimisation.} Interactive or automatic execution of
+  Algorithm~\ref{alg:approach}. The iteration log and colored history strip
+  (green~=~improvement, amber~=~backtrack), the live best prompt and its
+  evolving optimizable section, and the per-class metrics are shown together,
+  exposing the optimization trajectory.}
+  \label{fig:tool-ape}
+\end{figure}
+
+% ---- Figure 4: Baselines + Results side by side -----------------------------
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}[t]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/tool_baselines.png}
+    \caption{Baselines: per-class F\textsubscript{1} per strategy.}
+    \label{fig:tool-baselines}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{figures/tool_results.png}
+    \caption{Results: macro/per-class F\textsubscript{1} across methods.}
+    \label{fig:tool-results}
+  \end{subfigure}
+  \caption{\textbf{Baselines and Results.} (a)~Each prompting strategy is run
+  and scored per class. (b)~The session summary contrasts the baselines with
+  the APE-optimized prompt; the optimized prompt yields the highest macro
+  F\textsubscript{1} and improves the weakest classes.}
+  \label{fig:tool-baseres}
+\end{figure}

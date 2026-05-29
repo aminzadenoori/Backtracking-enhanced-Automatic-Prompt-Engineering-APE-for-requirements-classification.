@@ -1,0 +1,31 @@
+Security: Security requirements are prescriptive constraints imposed on a
+system's functional behaviour to operationalize its security goals. They are
+not functional requirements themselves but restrict how functions are
+performed to prevent, detect, or recover from harm. They are expressed in
+precise, operational terms clear enough for implementation by system designers
+and architects. Security requirements are derived from business and functional
+goals and may be categorized as primary (directly supporting fundamental
+security objectives) or secondary (enabling the fulfilment of primary goals
+when direct enforcement is infeasible or costly, e.g. via detection or
+recovery). They are manifestations of high-level organizational policies into
+specific system requirements and are deeply tied to the broader system context,
+which may include non-software components or processes. Security requirements
+define and specify security policies and must address risks, threats, and
+assets, while influencing and being influenced by security mechanisms (user
+IDs, passwords, encryption, firewalls, antivirus, intrusion detection),
+vulnerabilities, and attacks. Typical concerns include access limitation,
+log-on procedures and passwords, data protection and recovery, and protection
+from accidental or malicious access, use, modification, destruction, or
+disclosure.
+
+Non-security: Non-security requirements are constraints or specifications that
+govern a system's behaviour, performance, and structure without being directly
+tied to security goals. Unlike security requirements, they do not aim to
+prevent, detect, or recover from harm, and do not operationalize security
+policies. They include functional requirements (what the system should do) and
+other non-functional requirements such as performance, usability, reliability,
+scalability, and maintainability. They are typically derived from business
+needs and user expectations but are not intended to address risks, threats, or
+vulnerabilities; while they may influence system design and operation, they do
+not explicitly enforce security mechanisms or aim to mitigate security
+concerns.

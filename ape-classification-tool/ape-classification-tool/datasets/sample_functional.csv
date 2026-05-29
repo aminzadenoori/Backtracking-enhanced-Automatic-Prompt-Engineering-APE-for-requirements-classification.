@@ -1,0 +1,17 @@
+text,label
+The system shall allow users to create a new account,Functional
+Users shall be able to reset their password via email,Functional
+The application shall generate a PDF invoice on checkout,Functional
+The API shall expose an endpoint to list all orders,Functional
+The system shall send a confirmation email after registration,Functional
+Administrators shall be able to deactivate user accounts,Functional
+The app shall display search results ranked by relevance,Functional
+Users shall be able to upload a profile photo,Functional
+The system shall respond to any request within 500 milliseconds,Non-functional
+The platform shall support 10000 concurrent sessions,Non-functional
+The service shall maintain 99.95 percent uptime,Non-functional
+The interface shall be usable on screens as small as 320 pixels,Non-functional
+All data shall be encrypted with AES-256 at rest,Non-functional
+The system shall run on Linux, Windows, and macOS,Non-functional
+The codebase shall achieve 80 percent unit-test coverage,Non-functional
+The application shall recover from a crash within 30 seconds,Non-functional

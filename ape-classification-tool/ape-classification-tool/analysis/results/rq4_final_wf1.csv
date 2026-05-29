@@ -1,0 +1,16 @@
+model,dataset,ape_uninformed,ape_informed
+Qwen2-7B,Promise_Refined,0.648,0.748
+Falcon3-7B,Promise_Refined,0.606,0.706
+Granite-3.2-8B,Promise_Refined,0.636,0.648
+Ministral-8B,Promise_Refined,0.528,0.598
+Llama-3-8B,Promise_Refined,0.688,0.608
+Qwen2-7B,Promise_NFR,0.852,0.856
+Falcon3-7B,Promise_NFR,0.826,0.799
+Granite-3.2-8B,Promise_NFR,0.847,0.880
+Ministral-8B,Promise_NFR,0.847,0.820
+Llama-3-8B,Promise_NFR,0.797,0.827
+Qwen2-7B,SecReq,0.944,0.945
+Falcon3-7B,SecReq,0.947,0.949
+Granite-3.2-8B,SecReq,0.858,0.860
+Ministral-8B,SecReq,0.922,0.922
+Llama-3-8B,SecReq,0.909,0.909

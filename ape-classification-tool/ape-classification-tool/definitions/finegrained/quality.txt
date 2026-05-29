@@ -1,0 +1,19 @@
+Quality: A quality requirement expresses how well a system or service should
+execute an intended function. It includes attributes or constraints that
+address product-quality aspects and quality-in-use aspects. Product-quality
+aspects include functional suitability, reliability, performance, efficiency,
+usability, maintainability, security, compatibility, and portability.
+Quality-in-use aspects include satisfaction, effectiveness, freedom from risk,
+efficiency, and context coverage. Quality requirements often address the global
+properties or characteristics of the system rather than those of specific
+functions.
+
+Non-quality: A non-quality requirement does not express how well a system or
+service should execute an intended function. It excludes attributes or
+constraints that address product-quality and quality-in-use aspects — it does
+not include functional suitability, reliability, performance, efficiency,
+usability, maintainability, security, compatibility, or portability, nor
+satisfaction, effectiveness, freedom from risk, or context coverage. Non-quality
+requirements do not typically address the global properties or characteristics
+of the system; instead they focus solely on the properties of specific
+functions.

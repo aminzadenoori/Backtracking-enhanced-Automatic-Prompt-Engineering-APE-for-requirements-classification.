@@ -1,0 +1,2 @@
+Functional: requirements that define the specific behaviours, features, and capabilities the system must have — what the system should do, such as the tasks it performs, the data it processes, and the interactions it supports. Focus on the "what", not the "how".
+Non-functional: requirements that specify how a system should behave rather than what it should do — quality-related attributes and constraints under which the system must operate (performance, scalability, portability, compatibility, reliability, maintainability, availability, security, usability).

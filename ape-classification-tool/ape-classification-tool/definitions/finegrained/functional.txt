@@ -1,0 +1,22 @@
+Functional: Functional requirements define the essential functions a system
+must perform, the services it must offer, and the behaviours it must exhibit
+under specified conditions. They focus on what the system should do —
+describing the actions, operations, or transformations the system executes —
+without addressing implementation constraints. They typically specify the
+inputs (stimuli) to the system, the outputs (responses) from the system, and
+the behavioural relationships between them. Concrete examples include user
+authentication, data storage, report generation, and integration with other
+systems. They focus on the "what" the system does rather than the "how" of its
+operation. (Derived from Glinz's summary of the literature definitions.)
+
+Non-functional: Non-functional requirements do not define the essential
+functions a system must perform, the services it must offer, or the behaviours
+it must exhibit under specified conditions. They do not focus on what the
+system should do — avoiding descriptions of the actions, operations, or
+transformations the system executes — and instead address implementation
+constraints and quality-related attributes. They typically exclude
+specifications of inputs (stimuli), outputs (responses), and the behavioural
+relationships between them, and instead encompass quality attributes and the
+constraints under which the system must operate, including performance,
+scalability, portability, compatibility, reliability, maintainability,
+availability, security, and usability.

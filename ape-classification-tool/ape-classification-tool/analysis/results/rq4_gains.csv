@@ -1,0 +1,16 @@
+model,dataset,delta_informed,delta_uninformed
+Qwen2-7B,Promise_Refined,0.082,0.155
+Falcon3-7B,Promise_Refined,0.093,0.150
+Granite-3.2-8B,Promise_Refined,0.204,0.012
+Ministral-8B,Promise_Refined,0.093,0.100
+Llama-3-8B,Promise_Refined,0.153,-0.080
+Qwen2-7B,Promise_NFR,0.103,0.108
+Falcon3-7B,Promise_NFR,0.118,-0.027
+Granite-3.2-8B,Promise_NFR,0.070,0.136
+Ministral-8B,Promise_NFR,0.126,-0.027
+Llama-3-8B,Promise_NFR,0.081,0.030
+Qwen2-7B,SecReq,0.062,0.065
+Falcon3-7B,SecReq,0.064,0.066
+Granite-3.2-8B,SecReq,-0.013,0.050
+Ministral-8B,SecReq,0.076,0.078
+Llama-3-8B,SecReq,0.000,0.000

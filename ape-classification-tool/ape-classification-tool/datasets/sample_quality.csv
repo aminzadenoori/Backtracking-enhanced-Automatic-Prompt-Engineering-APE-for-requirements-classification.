@@ -1,0 +1,17 @@
+text,label
+The system shall handle 5000 transactions per second,Quality
+Page loads shall complete within one second at the 95th percentile,Quality
+The service shall achieve 99.99 percent availability,Quality
+The application shall be operable on iOS and Android without changes,Quality
+Mean time to recovery after failure shall not exceed five minutes,Quality
+New developers shall be productive within two days of onboarding,Quality
+The UI shall meet WCAG 2.1 AA accessibility guidelines,Quality
+The system shall encrypt all stored credentials,Quality
+The system shall let users add items to a shopping cart,Non-quality
+Customers shall be able to track the status of an order,Non-quality
+The app shall allow filtering products by category,Non-quality
+The system shall record each completed purchase in the ledger,Non-quality
+Users shall be able to cancel an order before shipment,Non-quality
+The API shall return a JSON list of available products,Non-quality
+The system shall email a receipt after each payment,Non-quality
+Administrators shall be able to add new products to the catalogue,Non-quality
