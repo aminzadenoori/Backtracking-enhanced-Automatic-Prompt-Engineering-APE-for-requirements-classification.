@@ -4,7 +4,7 @@
 
 This repository is the replication package for *Automatic Prompt Engineering
 (APE): the Case of Requirements Classification* (Zadenoori et al.). It provides
-a faithful, tested implementation of the paper's **Algorithm 1**, the four
+a tested implementation of the paper's **Algorithm 1**, the four
 prompting baselines, the full statistical analyses for **RQ1-RQ4**, an
 interactive GUI, and the class definitions and datasets used in the study.
 
